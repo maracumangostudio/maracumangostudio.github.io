@@ -4,6 +4,9 @@
     box-sizing: border-box;
     font-family: Arial, sans-serif;
 }
+.links a.active {
+    color: #f8aa22;
+}
 body {
     background-color: #ffffff;
     color: #333;
@@ -12,18 +15,19 @@ body {
 .navbar {
     width: 100%;
     background: #ffffff;
-    padding: 18px 40px;
+    padding: 18px  9%;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
+    gap: 20%;
     align-items: center;
 }
 .logo img {
-    height: 100px;
+    height: 80px;
     width: auto;
 }
 .links  {
     display: flex;
-    gap: 30px;
+    gap: 50%;
 }
 .links a {
     color: #023a51;
@@ -31,11 +35,12 @@ body {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     font-size: 19px;
-    gap: 70px;
     transition: color 0.3s ease;
 }
+
+
 .links a:hover {
-    color: #ff6600;
+    color: #f8aa22;
 }
 .hamburger {
     width: 30px;
@@ -74,7 +79,7 @@ body {
 
 .hero-content .dot {
   display: inline;
-  color: #ff7a00;
+  color: #f8aa22;
 }
 
 .hero-content p {
@@ -87,7 +92,7 @@ body {
 .btn-primary {
   display: inline-block;
   padding: 0.9rem 2rem;
-  background-color: #ff7a00;
+  background-color: #f8aa22;
   color: #fff;
   font-weight: 600;
   border-radius: 999px;
@@ -115,7 +120,7 @@ body {
         position: absolute;
         text-align: center;
         gap: 20px;
-        top: 70px;
+        top: 100px;
         right: 0;
         left: 0;
         padding: 20px 0;
