@@ -165,6 +165,7 @@ body {
     max-width: 0;
     white-space: nowrap;
     overflow: hidden;
+    gap: 10px;
     transition: 0.3s ease;
 }
 
