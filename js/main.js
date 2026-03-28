@@ -3,10 +3,10 @@
    ═══════════════════════════════════════ */
 
 /* ── Navbar: scroll effect ───────────── */
-const navbar    = document.getElementById('navbar');
-const navLinks  = document.getElementById('navLinks');
+const navbar = document.getElementById('navbar');
+const navLinks = document.getElementById('navLinks');
 const hamburger = document.getElementById('hamburger');
-const allLinks  = document.querySelectorAll('.nav-link');
+const allLinks = document.querySelectorAll('.nav-link');
 
 window.addEventListener('scroll', () => {
   navbar.classList.toggle('scrolled', window.scrollY > 40);
@@ -33,10 +33,10 @@ const sections = document.querySelectorAll('section[id]');
 function updateActiveLink() {
   const scrollY = window.scrollY + 100;
   sections.forEach(section => {
-    const top    = section.offsetTop;
+    const top = section.offsetTop;
     const height = section.offsetHeight;
-    const id     = section.getAttribute('id');
-    const link   = document.querySelector(`.nav-link[href="#${id}"]`);
+    const id = section.getAttribute('id');
+    const link = document.querySelector(`.nav-link[href="#${id}"]`);
     if (link) {
       link.classList.toggle('active', scrollY >= top && scrollY < top + height);
     }
@@ -50,7 +50,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     if (target) {
       e.preventDefault();
       const navH = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--nav-h'));
-      const top  = target.getBoundingClientRect().top + window.scrollY - navH;
+      const top = target.getBoundingClientRect().top + window.scrollY - navH;
       window.scrollTo({ top, behavior: 'smooth' });
     }
   });
@@ -81,22 +81,42 @@ reveals.forEach((el, i) => {
 });
 
 /* ── Contact form (demo) ─────────────── */
-const form    = document.getElementById('contactForm');
-const formOk  = document.getElementById('formOk');
+const form = document.getElementById('contactForm');
+const formOk = document.getElementById('formOk');
 
 form.addEventListener('submit', (e) => {
   e.preventDefault();
 
+
+  const nombre = document.getElementById('nombre').value;
+  const email = document.getElementById('email').value;
+  const servicio = document.getElementById('servicio').value;
+  const mensaje = document.getElementById('mensaje').value;
+
+  const destinatario = "tucorreo@gmail.com";
+  const asunto = "Nuevo contacto desde la web";
+
+  const cuerpo =
+    "Nombre: " + nombre + "%0D%0A" +
+    "Email: " + email + "%0D%0A" +
+    "Servicio: " + servicio + "%0D%0A%0D%0A" +
+    "Mensaje:%0D%0A" + mensaje;
+
+  const mailtoLink = `mailto:${destinatario}?subject=${asunto}&body=${cuerpo}`;
+
+  window.open(mailtoLink, '_blank');;
+
+
   const btn = form.querySelector('button[type="submit"]');
   btn.textContent = 'Enviando...';
-  btn.disabled    = true;
+  btn.disabled = true;
 
   // Simulate async send (replace with real backend / formspree / emailjs)
   setTimeout(() => {
     formOk.classList.add('visible');
     form.reset();
     btn.textContent = 'Enviar mensaje 🚀';
-    btn.disabled    = false;
+    btn.disabled = false;
 
     // Optionally hide success after 5s
     setTimeout(() => formOk.classList.remove('visible'), 5000);
@@ -106,5 +126,5 @@ form.addEventListener('submit', (e) => {
 /* ── Input focus style polish ─────────── */
 document.querySelectorAll('.fgroup input, .fgroup select, .fgroup textarea').forEach(el => {
   el.addEventListener('focus', () => el.parentElement.classList.add('focused'));
-  el.addEventListener('blur',  () => el.parentElement.classList.remove('focused'));
+  el.addEventListener('blur', () => el.parentElement.classList.remove('focused'));
 });
