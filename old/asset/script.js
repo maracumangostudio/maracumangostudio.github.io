@@ -64,3 +64,75 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 });
+
+
+
+
+
+
+
+
+const track = document.querySelector(".services-track");
+let cards = document.querySelectorAll(".service-box");
+const visible = 6;
+let index = visible;
+
+
+// Clonar últimos 6 al inicio
+for (let i = cards.length - visible; i < cards.length; i++) {
+    track.prepend(cards[i].cloneNode(true));
+}
+
+// Clonar primeros 6 al final
+for (let i = 0; i < visible; i++) {
+    track.appendChild(cards[i].cloneNode(true));
+}
+
+// Recalcular
+cards = document.querySelectorAll(".service-box");
+function move() {
+    track.style.transition = "transform 0.6s ease";
+    track.style.transform = `translateX(-${index * (210 / visible)}%)`;
+}
+
+
+track.style.transition = "none";
+track.style.transform = `translateX(-${index * (210 / visible)}%)`;
+// Flecha →
+document.getElementById("next").onclick = () => {
+    index++;
+    move();
+};
+
+// Flecha ←
+document.getElementById("prev").onclick = () => {
+    if (index === 0) {
+        index = allCards.length - visible;
+        track.style.transition = "none";
+        track.style.transform = `translateX(-${index * (100 / visible)}%)`;
+
+        requestAnimationFrame(() => {
+            requestAnimationFrame(() => {
+                index--;
+                move();
+            });
+        });
+    } else {
+        index--;
+        move();
+    }
+};
+// Cuando llegue al final falso → volver al inicio real
+track.addEventListener("transitionend", () => {
+    if (index >= cards.length - visible) {
+        track.style.transition = "none";
+        index = 0;
+        track.style.transform = "translateX(0)";
+    }
+});
+
+// Autoplay: 1 tarjeta cada segundo → siempre a la derecha
+setInterval(() => {
+    index++;
+    move();
+}, 3000);

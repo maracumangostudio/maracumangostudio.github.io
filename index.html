@@ -1,134 +1,316 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="apple-touch-icon" sizes="57x57" href="favicon.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="favicon.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="favicon.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="favicon.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="favicon.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="favicon.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="favicon.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="favicon.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="favicon.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="favicon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="favicon.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon.png">
-    <link rel="manifest" href="/manifest.json">
-    <meta name="msapplication-TileColor" content="#000000">
-    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
-    <meta name="theme-color" content="#000000">
-    <link rel="stylesheet" href="/asset/style.css">
-    <meta name="generator" content="Maracumango">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Bungee&family=Karla:ital,wght@0,200..800;1,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
-    <meta name="description"
-        content="Maracumango Studio es una agencia de marketing digital especializada en branding, diseño web en WordPress y contenido para negocios en Perú.">
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <title>Maracumango Studio | Agencia de Marketing y Diseño Web en Perú</title>
-
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Maracumango Studio | El toque fresco que tu marca necesita</title>
+  <meta name="description" content="Agencia de Marketing y Diseño en Perú. Diseño web con WordPress, diseño gráfico para redes y social media." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
 </head>
-
 <body>
 
-    <header class="navbar">
-        <div class="logo"><img src="/asset/img/logo_largo.svg" alt="Mi SVG feliz"></div>
-        <nav class="links" id="navLinks">
-            <a href="/" class="active">Inicio</a>
-            <a href="#services">Servicios</a>
-            <a href="#about">Nosotros</a>
-            <a href="/contacto">Contacto</a>
-        </nav>
-        <div class="hamburger" id="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
+  <!-- NAVBAR -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#inicio" class="nav-logo">
+        <span class="logo-icon">🥭</span>
+        <span class="logo-text">maracumango<em>studio</em></span>
+      </a>
+      <nav class="nav-links" id="navLinks">
+        <a href="#inicio"    class="nav-link">Inicio</a>
+        <a href="#servicios" class="nav-link">Servicios</a>
+        <a href="#clientes"  class="nav-link">Clientes</a>
+        <a href="#contacto"  class="nav-link">Contacto</a>
+        <a href="https://wa.me/914891946" target="_blank" class="nav-cta">Hablemos 💬</a>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="inicio">
+    <div class="hero-blobs">
+      <div class="blob b1"></div>
+      <div class="blob b2"></div>
+      <div class="blob b3"></div>
+    </div>
+    <div class="hero-inner">
+      <div class="hero-content">
+        <div class="hero-badge">✦ Agencia de Marketing &amp; Diseño · Lima, Perú</div>
+        <h1>
+          El toque<br/>
+          <span class="grad-text">fresco</span><br/>
+          que tu marca<br/>
+          necesita.
+        </h1>
+        <p class="hero-desc">
+          Diseñamos webs, identidades visuales y contenido para redes que convierten seguidores en clientes. Con sabor único.
+        </p>
+        <div class="hero-btns">
+          <a href="#servicios" class="btn btn-primary">Ver servicios</a>
+          <a href="#contacto"  class="btn btn-outline">Contáctanos →</a>
         </div>
-    </header>
-
-    <a href="https://wa.me/914891946" class="whatsapp-btn" target="_blank">
-
-        <span class="whatsapp-text">Contáctanos</span>
-
-        <svg viewBox="0 0 32 32" class="whatsapp-icon">
-            <path
-                d="M16 .396C7.164.396 0 7.56 0 16.396c0 2.89.754 5.71 2.184 8.195L0 32l7.613-2.123A15.93 15.93 0 0016 32c8.836 0 16-7.164 16-16.004C32 7.56 24.836.396 16 .396zm0 29.19a13.1 13.1 0 01-6.682-1.832l-.48-.285-4.515 1.258 1.206-4.402-.31-.452A13.09 13.09 0 012.91 16.396c0-7.207 5.88-13.09 13.09-13.09 7.207 0 13.09 5.883 13.09 13.09 0 7.21-5.883 13.19-13.09 13.19zm7.191-9.835c-.393-.197-2.327-1.15-2.687-1.28-.36-.13-.623-.197-.887.197-.263.393-1.02 1.28-1.25 1.542-.23.263-.46.296-.853.1-.393-.197-1.66-.61-3.16-1.947-1.167-1.04-1.955-2.327-2.184-2.72-.23-.393-.024-.605.173-.802.177-.176.393-.46.59-.69.197-.23.263-.393.393-.657.13-.263.066-.493-.033-.69-.1-.197-.887-2.14-1.214-2.933-.32-.77-.645-.666-.887-.678l-.756-.014c-.263 0-.69.1-1.053.493-.36.393-1.38 1.35-1.38 3.29 0 1.94 1.413 3.816 1.61 4.08.197.263 2.78 4.247 6.74 5.955.943.407 1.677.65 2.25.832.945.3 1.806.258 2.485.156.758-.113 2.327-.95 2.654-1.87.327-.92.327-1.708.23-1.87-.1-.164-.36-.263-.754-.46z" />
-        </svg>
-    </a>
-
-
-
-    <section class="hero">
-
-
-        <div class="hero-image">
-            <img src="/asset/img/maracuya.webp" alt="Exprimimos el potencial de tu negocio">
+        <div class="hero-stats">
+          <div class="stat"><strong>+50</strong><span>Proyectos</span></div>
+          <div class="stat-divider"></div>
+          <div class="stat"><strong>3</strong><span>Servicios</span></div>
+          <div class="stat-divider"></div>
+          <div class="stat"><strong>100%</strong><span>Dedicación</span></div>
         </div>
-        <div class="hero-content">
-            <h1>
-                EL TOQUE FRESCO QUE TU MARCA NECESITA<span class="dot">.</span>
-            </h1>
+      </div>
+      <div class="hero-visual">
+        <div class="circle-ring">
+          <svg viewBox="0 0 200 200" class="ring-svg">
+            <path id="ringPath" d="M 100,100 m -75,0 a 75,75 0 1,1 150,0 a 75,75 0 1,1 -150,0" fill="none"/>
+            <text><textPath href="#ringPath" startOffset="0%">MARACUMANGO · STUDIO · LIMA · PERÚ · </textPath></text>
+          </svg>
+          <div class="ring-center">🍊</div>
+        </div>
+        <div class="float-card fc1">
+          <span class="fc-icon">🎨</span>
+          <span>Diseño Gráfico</span>
+        </div>
+        <div class="float-card fc2">
+          <span class="fc-icon">🌐</span>
+          <span>Diseño Web</span>
+        </div>
+        <div class="float-card fc3">
+          <span class="fc-icon">📱</span>
+          <span>Social Media</span>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-hint">
+      <span>Scroll</span>
+      <div class="scroll-bar"></div>
+    </div>
+  </section>
 
-            <p>
-                Nosotros te ayudamos a potenciar tu empresa en el Mundo Digital
-            </p>
+  <!-- SERVICIOS -->
+  <section class="servicios section" id="servicios">
+    <div class="container">
+      <div class="sec-header">
+        <span class="sec-tag">✦ Lo que hacemos</span>
+        <h2>Nuestros <span class="grad-text">Servicios</span></h2>
+        <p>Herramientas digitales diseñadas para hacer crecer tu presencia online con estilo y estrategia.</p>
+      </div>
 
-            <a href="https://wa.me/914891946" class="btn-primary">
-                Contactanos
+      <div class="cards-grid">
+
+        <div class="svc-card featured">
+          <div class="svc-tag">⭐ Más popular</div>
+          <div class="svc-icon">🌐</div>
+          <h3>Diseño Web con WordPress</h3>
+          <p>Sitios web rápidos, modernos y optimizados para SEO. Desde landing pages hasta tiendas virtuales completas.</p>
+          <ul>
+            <li>Landing pages de alta conversión</li>
+            <li>Páginas web corporativas</li>
+            <li>Tiendas WooCommerce</li>
+            <li>Dominio + Hosting + SSL</li>
+          </ul>
+          <a href="#contacto" class="svc-btn">Cotizar ahora →</a>
+        </div>
+
+        <div class="svc-card">
+          <div class="svc-icon">🎨</div>
+          <h3>Diseño Gráfico para Redes</h3>
+          <p>Contenido visual que detiene el scroll. Posts, stories y piezas publicitarias con identidad única para tu marca.</p>
+          <ul>
+            <li>Posts y Stories para RRSS</li>
+            <li>Identidad de marca y logotipo</li>
+            <li>Flyers y materiales digitales</li>
+            <li>Pack mensual de contenido</li>
+          </ul>
+          <a href="#contacto" class="svc-btn">Cotizar ahora →</a>
+        </div>
+
+        <div class="svc-card">
+          <div class="svc-icon">📱</div>
+          <h3>Social Media</h3>
+          <p>Gestionamos tus redes con estrategia y consistencia para que tu comunidad crezca y genere confianza real.</p>
+          <ul>
+            <li>Estrategia de contenido mensual</li>
+            <li>Programación y publicación</li>
+            <li>Gestión de comunidad</li>
+            <li>Reportes de resultados</li>
+          </ul>
+          <a href="#contacto" class="svc-btn">Cotizar ahora →</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESO -->
+  <section class="proceso section">
+    <div class="container">
+      <div class="sec-header">
+        <span class="sec-tag">✦ Cómo trabajamos</span>
+        <h2>Simple y <span class="grad-text">efectivo</span></h2>
+      </div>
+      <div class="steps-row">
+        <div class="step">
+          <div class="step-n">01</div>
+          <h4>Conversamos</h4>
+          <p>Entendemos tu negocio, objetivos y público objetivo.</p>
+        </div>
+        <div class="step-arrow">→</div>
+        <div class="step">
+          <div class="step-n">02</div>
+          <h4>Diseñamos</h4>
+          <p>Creamos propuestas alineadas con la identidad de tu marca.</p>
+        </div>
+        <div class="step-arrow">→</div>
+        <div class="step">
+          <div class="step-n">03</div>
+          <h4>Entregamos</h4>
+          <p>Revisamos juntos y lanzamos con todo listo para brillar.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CLIENTES / TESTIMONIOS -->
+  <section class="clientes section" id="clientes">
+    <div class="container">
+      <div class="sec-header">
+        <span class="sec-tag">✦ Nuestros clientes</span>
+        <h2>Marcas que <span class="grad-text">confían</span></h2>
+        <p>Trabajamos con emprendedores y empresas que quieren destacar en el mundo digital.</p>
+      </div>
+
+      <div class="testimonials">
+        <div class="testi-card">
+          <div class="testi-stars">★★★★★</div>
+          <p>"Maracumango transformó por completo la imagen de mi negocio. El diseño es exactamente lo que necesitaba: fresco, moderno y muy profesional."</p>
+          <div class="testi-author">
+            <div class="avatar">AS</div>
+            <div><strong>Ana Sofía R.</strong><span>Boutique de ropa · Lima</span></div>
+          </div>
+        </div>
+        <div class="testi-card testi-featured">
+          <div class="testi-stars">★★★★★</div>
+          <p>"Me hicieron la web en WordPress y quedé impresionado. Rápida, bonita y mis clientes me la mencionan siempre. 100% recomendados."</p>
+          <div class="testi-author">
+            <div class="avatar">CM</div>
+            <div><strong>Carlos M.</strong><span>Restaurante · Miraflores</span></div>
+          </div>
+        </div>
+        <div class="testi-card">
+          <div class="testi-stars">★★★★★</div>
+          <p>"El contenido para redes que nos hacen es de otro nivel. Nuestra cuenta creció un 40% en 3 meses gracias a Maracumango Studio."</p>
+          <div class="testi-author">
+            <div class="avatar">LP</div>
+            <div><strong>Lucía P.</strong><span>Skincare · Perú</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="logos-section">
+        <p>Marcas que ya tienen el toque fresco 🍊</p>
+        <div class="logos-row">
+          <div class="logo-chip">Tu Marca</div>
+          <div class="logo-chip">Tu Marca</div>
+          <div class="logo-chip">Tu Marca</div>
+          <div class="logo-chip">Tu Marca</div>
+          <div class="logo-chip">Tu Marca</div>
+          <div class="logo-chip">Tu Marca</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section class="contacto section" id="contacto">
+    <div class="container">
+      <div class="contact-wrap">
+        <div class="contact-left">
+          <span class="sec-tag">✦ Trabajemos juntos</span>
+          <h2>¿Listo para el <span class="grad-text">cambio?</span></h2>
+          <p>Cuéntanos sobre tu proyecto y te respondemos en menos de 24 horas con una propuesta personalizada y sin compromiso.</p>
+          <div class="contact-links">
+            <a href="https://wa.me/914891946" target="_blank" class="clink">
+              <div class="clink-icon">💬</div>
+              <div><strong>WhatsApp</strong><span>914 891 946</span></div>
             </a>
-        </div>
-    </section>
-
-    <section class="hero">
-
-
-        <div class="hero-image">
-            <img src="/assets/img/naranja.webp" alt="Exprimimos el potencial de tu negocio">
-        </div>
-        <div class="hero-content">
-            <h1>
-                EL TOQUE FRESCO QUE TU MARCA NECESITA<span class="dot">.</span>
-            </h1>
-
-            <p>
-                Nosotros te ayudamos a potenciar tu empresa en el Mundo Digital
-            </p>
-
-            <a href="https://wa.me/914891946" class="btn-primary">
-                Contactanos
+            <a href="mailto:maracumango.studio@gmail.com" class="clink">
+              <div class="clink-icon">✉️</div>
+              <div><strong>Email</strong><span>maracumango.studio@gmail.com</span></div>
             </a>
+            <div class="clink">
+              <div class="clink-icon">📍</div>
+              <div><strong>Ubicación</strong><span>Lima, Perú</span></div>
+            </div>
+          </div>
         </div>
-    </section>
-    <section class="hero">
+        <form class="contact-form" id="contactForm">
+          <div class="fgroup">
+            <label for="nombre">Nombre completo</label>
+            <input type="text" id="nombre" placeholder="Tu nombre" required />
+          </div>
+          <div class="fgroup">
+            <label for="email">Correo electrónico</label>
+            <input type="email" id="email" placeholder="tucorreo@ejemplo.com" required />
+          </div>
+          <div class="fgroup">
+            <label for="servicio">Servicio de interés</label>
+            <select id="servicio">
+              <option value="">Selecciona un servicio</option>
+              <option>Diseño Web con WordPress</option>
+              <option>Diseño Gráfico para Redes</option>
+              <option>Social Media</option>
+              <option>Pack Completo</option>
+            </select>
+          </div>
+          <div class="fgroup">
+            <label for="mensaje">Mensaje</label>
+            <textarea id="mensaje" rows="4" placeholder="Cuéntanos sobre tu proyecto..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full">Enviar mensaje 🚀</button>
+          <div class="form-ok" id="formOk">✅ ¡Listo! Te responderemos muy pronto.</div>
+        </form>
+      </div>
+    </div>
+  </section>
 
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="#inicio" class="nav-logo">
+          <span class="logo-icon">🥭</span>
+          <span class="logo-text">maracumango<em>studio</em></span>
+        </a>
+        <p>El toque fresco que tu marca necesita.</p>
+      </div>
+      <nav class="footer-nav">
+        <a href="#inicio">Inicio</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#clientes">Clientes</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+      <div class="footer-socials">
+        <a href="https://wa.me/914891946" target="_blank">💬</a>
+        <a href="mailto:maracumango.studio@gmail.com">✉️</a>
+      </div>
+    </div>
+    <div class="footer-copy">
+      <p>© 2025 Maracumango Studio · Hecho con 🍊 en Lima, Perú</p>
+    </div>
+  </footer>
 
-        <div class="hero-image">
-            <img src="/assets/img/naranja.webp" alt="Exprimimos el potencial de tu negocio">
-        </div>
-        <div class="hero-content">
-            <h1>
-                EL TOQUE FRESCO QUE TU MARCA NECESITA<span class="dot">.</span>
-            </h1>
+  <!-- WhatsApp flotante -->
+  <a href="https://wa.me/914891946" target="_blank" class="wa-float" aria-label="WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.124.554 4.122 1.523 5.857L.057 23.882l6.168-1.443A11.944 11.944 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.007-1.37l-.36-.213-3.664.858.906-3.555-.234-.374A9.818 9.818 0 0112 2.182c5.422 0 9.818 4.396 9.818 9.818 0 5.423-4.396 9.818-9.818 9.818z"/>
+    </svg>
+  </a>
 
-            <p>
-                Nosotros te ayudamos a potenciar tu empresa en el Mundo Digital
-            </p>
-
-            <a href="https://wa.me/914891946" class="btn-primary">
-                Contactanos
-            </a>
-        </div>
-    </section>
-
+  <script src="js/main.js"></script>
 </body>
-<script src="/asset/script.js"></script>
-
 </html>
