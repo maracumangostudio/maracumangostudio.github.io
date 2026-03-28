@@ -93,8 +93,8 @@ form.addEventListener('submit', (e) => {
   const servicio = document.getElementById('servicio').value;
   const mensaje = document.getElementById('mensaje').value;
 
-  const destinatario = "tucorreo@gmail.com";
-  const asunto = "Nuevo contacto desde la web";
+  const destinatario = "maracumango.studio@gmail.com";
+  const asunto = servicio;
 
   const cuerpo =
     "Nombre: " + nombre + "%0D%0A" +
@@ -102,7 +102,7 @@ form.addEventListener('submit', (e) => {
     "Servicio: " + servicio + "%0D%0A%0D%0A" +
     "Mensaje:%0D%0A" + mensaje;
 
-  const mailtoLink = `mailto:${destinatario}?subject=${asunto}&body=${cuerpo}`;
+  const mailtoLink = `mailto:${destinatario}?subject=${asunto}&body=${mensaje}`;
 
   window.open(mailtoLink, '_blank');;
 
