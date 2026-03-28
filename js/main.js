@@ -97,14 +97,14 @@ form.addEventListener('submit', (e) => {
   const asunto = servicio;
 
   const cuerpo =
-    "Nombre: " + nombre + "%0D%0A" +
-    "Email: " + email + "%0D%0A" +
-    "Servicio: " + servicio + "%0D%0A%0D%0A" +
-    "Mensaje:%0D%0A" + mensaje;
+    `${mensaje}
+        
+Saludos,
+${nombre}`;
 
-  const mailtoLink = `mailto:${destinatario}?subject=${asunto}&body=${mensaje}`;
+  const gmailURL = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(destinatario)}&su=${encodeURIComponent(asunto)}&body=${encodeURIComponent(cuerpo)}`;
 
-  window.open(mailtoLink, '_blank');
+  window.open(gmailURL, 'gmailWindow', '_blank');
 
 
   const btn = form.querySelector('button[type="submit"]');
