@@ -104,7 +104,7 @@ form.addEventListener('submit', (e) => {
 
   const mailtoLink = `mailto:${destinatario}?subject=${asunto}&body=${mensaje}`;
 
-  window.open(mailtoLink, '_blank');;
+  window.open(mailtoLink, '_blank');
 
 
   const btn = form.querySelector('button[type="submit"]');
